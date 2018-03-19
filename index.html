@@ -18,18 +18,28 @@
 		}
 
 		h2 {
-			margin: 30px 2.5% 10px;
+			margin: 30px 3% 10px;
 			color: #3E606F;
 		}
 
 		p {
-			margin: 30px 2.5% 10px;
+			margin: 30px 3.5% 10px;
 			color: #193441;
 		}
 
 		a {
-			margin: 30px 2.5% 10px;
+			margin: 0 3.5% 10px;
 			color: #3E606F;
+		}
+
+		img {
+			margin: 0 3.5% 10px;
+			background-color: white;
+		}
+
+		#myli {
+			margin: 0 3.5% 0;
+			color: #193441;
 		}
 
 		#menu {
@@ -72,6 +82,7 @@
 			<h1>IV122 course page.</h1>
 				<p>This is my portfolio for the IV122 course. I will update it over time.</p>
 				<p>TODO: Highlights and lowlights of my code.</p>
+				<p>TODO: I will add sample output images (including used parameters) later during march.</p>
 
 			<h1>Miscellaneous</h1>
 				<p>Stuff that doesn't belong to any specific lesson, but is rather used thorough whole semester.</p>
@@ -98,77 +109,170 @@
 
 			<h1>Lesson 1</h1>
 
-				<h2>Code</h2>>
-					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/SVG.py">A</a>
-					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/SVG.py">B</a>
-					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/SVG.py">C</a>
-					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/SVG.py">D</a>
+				<h2>A</h2>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_A.py">Code</a>
+					<p>TODO: description</p>
+				
+				<h2>B</h2>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_B.py">Code</a>
+					<p>
+						Test image was straightforward (customizable size). I made the star() function with customizable size, number of "quadrants",
+						number of lines and coloring function, that can depend on many parameters. Here are some examples:
+					</p>
+				
+					<h2>Output images</h2>
+
+					<p>Test</p>
+					<img src="output_images/1/test_picture(256).BMP">
+
+					<p>star(100, 4, 10)</p>
+					<img src="output_images/1/star(100, 4, 10).svg">
+
+					<p>star(200, 3, 30)</p>
+					<img src="output_images/1/star(200, 3, 30).svg">
+
+					<p>star(200, 7, 20, lambda x1, y1, x2, y2, i, n : (255*i//n, 255*(n-i)//n, 127))</p>
+					<img src="output_images/1/star_c0.svg">
+
+					<p>star(100, 4, 15, lambda x1, y1, x2, y2, i, n: (255*i//n, 255*i//n, round(sin(radians(180*i/n))*255)))</p>
+					<img src="output_images/1/star_c1.svg">
+
+					<p>star(100, 4, 15, lambda x1, y1, x2, y2, i, n: (200-round(sin(radians(180*i/n))*200), round(200-sin(radians(180*i/n))*200), round(200-sin(radians(180*i/n))*200)))</p>
+					<img src="output_images/1/star_c2.svg">
+
+					<p>star(200, 5, 250, lambda x1, y1, x2, y2, i, n : (1023*i//n%255, 511*i//n%255, 2047*i//n%255))</p>
+					<img src="output_images/1/star_c3.svg">
+
+				<h2>C</h2>	
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_C.py">Code</a>
+
+				<h2>D</h2>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_D.py">Code</a>
+				
+				
 
 		</div>
 
 		<li>2</li>
 		<div class="content" style="display: none">
-			<p>Content</p>
+			
+			<h1>Lesson 2</h1>
+
+				<p>I missed this class, I will catch up during Easter.</p>
+				<p>TODO</p>
+
 		</div>
 
 		<li>3</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+			
+			<h1>Lesson 3</h1>
+
+				<h2>Code</h2>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/3.py">Lesson 3 code</a>
+					<p>
+						I setup my turtle at the beginning. I could give each function it's own turtle through arguments,
+						but this is more practical for testing and working with. I can swap between Python Turtle and MyTurtle easily.
+						Python Turtle is better for testing, since I can see the process of drawing and I don't have to save the picture.
+						I use MyTurtle for final outputs for this portfolio.
+					</p>
+				
+				<h2>Output images</h2>
+					<p>TODO</p>
+
 		</div>
 
 		<li>4</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+			
+			<h1>Lesson 4</h1>
+
+				<h2>Code</h2>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/4.py">Lesson 4 code</a>
+				
+				<h2>Output images</h2>
+					<p>TODO</p>
+
 		</div>
 
 		<li>5</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+			
+			<h1>Lesson 5</h1>
+				<p>TODO</p>
+
 		</div>
 
 		<li>6</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->
+						
+			<h1>Lesson 6</h1>
+				<p>TODO</p>
+
 		</div>
 
 		<li>7</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+						
+			<h1>Lesson 7</h1>
+				<p>TODO</p>
+			
 		</div>
 
 		<li>8</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+						
+			<h1>Lesson 8</h1>
+				<p>TODO</p>
+			
 		</div>
 
 		<li>9</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+						
+			<h1>Lesson 9</h1>
+				<p>TODO</p>
+			
 		</div>
 
 		<li>10</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+						
+			<h1>Lesson 10</h1>
+				<p>Holiday</p>
+			
 		</div>
 
 		<li>11</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+						
+			<h1>Lesson 11</h1>
+				<p>Holiday</p>
+			
 		</div>
 
 		<li>12</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+						
+			<h1>Lesson 12</h1>
+				<p>TODO</p>
+			
 		</div>
 
 		<li>13</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+						
+			<h1>Lesson 13</h1>
+				<p>TODO</p>
+			
 		</div>
 
 		<li>14</li>
 		<div class="content" style="display: none">
-			<!-- Content goes here -->			
+						
+			<h1>Lesson 14</h1>
+				<p>TODO</p>
+			
 		</div>
 	</ul>
 	<div class="main-content">

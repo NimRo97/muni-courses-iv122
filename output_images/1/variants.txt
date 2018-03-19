@@ -1,0 +1,4 @@
+star_c0 = star(200,7,20,lambda x1, y1, x2, y2, i, n (255in, 255(n-i)n, 127))
+star_c1 = star(100,4,15,lambda x1, y1, x2, y2, i, n: (255*i//n, 255*i//n, round(sin(radians(180*i/n))*255)))
+star_c2 = star(100,4,15,lambda x1, y1, x2, y2, i, n: (200-round(sin(radians(180*i/n))*200), round(200-sin(radians(180*i/n))*200), round(200-sin(radians(180*i/n))*200)))
+star_c3 = star(200,5,250,lambda x1, y1, x2, y2, i, n : (1023*i//n%255, 511*i//n%255, 2047*i//n%255))
