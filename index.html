@@ -8,11 +8,28 @@
 			margin: 0;
 			padding: 0;
 			font-family: sans-serif;
-			color: #888;
+			color: #193441;
+			background-color: #FCFFF5;
 		}
 
 		h1 {
 			margin: 30px 2.5% 10px;
+			color: #3E606F;
+		}
+
+		h2 {
+			margin: 30px 2.5% 10px;
+			color: #3E606F;
+		}
+
+		p {
+			margin: 30px 2.5% 10px;
+			color: #193441;
+		}
+
+		a {
+			margin: 30px 2.5% 10px;
+			color: #3E606F;
 		}
 
 		#menu {
@@ -35,12 +52,12 @@
 		}
 
 		#menu li:hover {
-			background: #eee;
+			background: #D1DBBD;
 		}
 
 		.main-content {
 			max-width: 95%;
-			margin: 10px 2.5%;
+			margin: 50px 2.5%;
 			display: block;
 		}
 	</style>
@@ -51,17 +68,42 @@
 
 		<li>Index</li>
 		<div class="content" style="display: none">
-			<p>IV122 course page.</p>
+
+			<h1>IV122 course page.</h1>
+				<p>This is my portfolio for the IV122 course. I will update it over time.</p>
+				<p>TODO: Highlights and lowlights of my code.</p>
+
+			<h1>Miscellaneous</h1>
+				<p>Stuff that doesn't belong to any specific lesson, but is rather used thorough whole semester.</p>
+
+				<h2>SVG</h2>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/SVG.py">My svg library</a>
+					<p>
+						My library for working with .svg fileformat. Works in a similar way to Python image class.
+						You add lines using .line() method, more functionality will be added later.
+						Lines are added in mathematical x and y coordinates. The .close() method will flip y coordinates and normalize everything,
+						so that image will be diplayed right and no object will cross the zero lines.
+					</p>
+				
+				<h2>Turtle</h2>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/MyTurtle.py">My own turtle mplementation</a>
+					<p>
+						Uses my SVG library to output to .svg file. Methods have same names as Python Turtle's, so that my code is compatible wit both.
+						Some methods are just mocks to keep this compatibility (like .speed()). In order to output image to file, .save() method must be called.
+					</p>
 		</div>
 
 		<li>1</li>
 		<div class="content" style="display: none">
-			<p>Content will go here.</p>
-			<ul>
-				<li>Item 1</li>
-				<li>Item 2</li>
-			</ul>
-			<img src="https://picsum.photos/1002" alt="">
+
+			<h1>Lesson 1</h1>
+
+				<h2>Code</h2>>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/SVG.py">A</a>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/SVG.py">B</a>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/SVG.py">C</a>
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/SVG.py">D</a>
+
 		</div>
 
 		<li>2</li>

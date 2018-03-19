@@ -1,5 +1,5 @@
 from PIL import Image
-
+#TODO
 def ulam(n, f):
 
     im = Image.new("RGB", (n, n), (255, 255, 255))
