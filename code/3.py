@@ -1,13 +1,21 @@
 from turtle import Turtle
 from MyTurtle import MyTurtle
 from math import sqrt, sin, atan, radians, degrees
-julie = MyTurtle()
+julie = Turtle()
 julie.speed(10000)
 
-def square(n):
-    for i in range(4):
-        julie.forward(n)
-        julie.right(90)
+def poly(n, l):
+    for i in range(n):
+        julie.forward(l)
+        julie.right(360/n)
+
+def diamond(n, l):
+    for i in range(n):
+        poly(n, l)
+        julie.right(360/n)
+
+def square(l):
+    poly(4, l)
 
 def square_spiral(n, size):
     a = size
@@ -153,3 +161,27 @@ def penta_star(l):
     julie.backward(ln)
     julie.left(72)
     julie.backward(ln)
+
+def krishna(depth, length):
+    julie.pu()
+    julie.forward(length/2)
+    julie.left(135)
+    for i in range(4):
+        julie.pd()
+        julie.forward(sqrt(2)/2*length)
+        if depth > 0:
+            julie.right(45)
+            julie.forward(length)
+            julie.pu()
+            julie.forward((2**depth - 1.5)*length)
+            krishna(depth - 1, length)
+            julie.pu()
+            julie.backward((2**depth - 1.5)*length)
+            julie.backward(length)
+            julie.left(45)
+        julie.left(90)
+    julie.right(135)
+    julie.pu()
+    julie.backward(length/2)
+            
+        
