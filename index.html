@@ -82,7 +82,7 @@
 			<h1>IV122 course page.</h1>
 				<p>This is my portfolio for the IV122 course. I will update it over time.</p>
 				<p>TODO: Highlights and lowlights of my code.</p>
-				<p>TODO: I will add sample output images (including used parameters) later during march.</p>
+				<p>For feedback: please chceck lessons 5 and 1, they show, how I will complete everything later.</p>
 
 			<h1>Miscellaneous</h1>
 				<p>Stuff that doesn't belong to any specific lesson, but is rather used thorough whole semester.</p>
@@ -102,6 +102,13 @@
 						Uses my SVG library to output to .svg file. Methods have same names as Python Turtle's, so that my code is compatible wit both.
 						Some methods are just mocks to keep this compatibility (like .speed()). In order to output image to file, .save() method must be called.
 					</p>
+			
+			<h1>TODO</h1>
+				<p>Lesson 1: a lot is missing, I will catch up during march</p>
+				<p>Lesson 2: everything is missing, I missed the class. I will catch up during Easter Holiday</p>
+				<p>Lesson 3: code near-to-complete, but pictures missing</p>
+				<p>Lesson 4: a lot is missing, I will catch up during march</p>
+				<p>Lesson 5: convex wrap missing, otherwise complete</p>
 		</div>
 
 		<li>1</li>
@@ -199,7 +206,45 @@
 		<div class="content" style="display: none">
 			
 			<h1>Lesson 5</h1>
-				<p>TODO</p>
+
+				<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/5.py">Code</a>
+			
+				<h2>A</h2>
+					<p>crosses(200, 50, 40)</p>
+					<img src="output_images/5/crosses_200_50_40.svg">
+		
+				<h2>B</h2>
+					<p>
+						I made both random and heuristic triangulations. The random one gives (as expected) awful results,
+						heuristic ones are much better. Heuristic method has O(count^4) time complexity, but its results
+						are way "nicer". I also made some point generating functions that are not random.
+					</p>
+
+					<p>triangulation_random(200, 50)</p>
+					<img src="output_images/5/triang_r_200_50.svg">
+
+					<p>triangulation_heuristic(200, 100)</p>
+					<img src="output_images/5/triang_h_200_100.svg">
+
+					<p>
+						triangulation_heuristic(500, 20, hexa_points) This one shows, how the algorhithm is far from
+						optimal, all hexagons should have triangles inside with optimal algorhithm.</p>
+					<img src="output_images/5/triang_h_500_20_hexa.svg">
+
+					<p>triangulation_heuristic(500, 20, square_points)</p>
+					<img src="output_images/5/triang_h_500_20_square.svg">
+
+					<p>square_points without shorter lines (one-time-one-purpose code change)</p>
+					<img src="output_images/5/triang_square_no_short_lines.svg">
+
+					<p>hexa_points without shorter lines (one-time-one-purpose code change)</p>
+					<img src="output_images/5/triang_hexa_no_short_lines.svg">
+		
+			
+
+				<h2>C</h2>	
+					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_C.py">Code</a>
+					<p>TODO</p>
 
 		</div>
 
