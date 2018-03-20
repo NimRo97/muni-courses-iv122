@@ -2,7 +2,12 @@ from SVG import Svg
 from random import uniform, choice
 from math import sqrt, pi, sin, cos
 
+
 def random_lines(n, count, l):
+    """
+    Random lines (count lines) of the same length (l) spread over approximately
+    square canvas of size n (can vary depending on the lines generated)
+    """
     
     lines = []
     
@@ -17,6 +22,10 @@ def random_lines(n, count, l):
 
 
 def random_points(n, count):
+    """
+    Generates absolutely random count points over square canvas of size n
+    """
+    
     points = []
     for i in range(count):
         points.append((uniform(0, n), uniform(0, n)))
@@ -24,6 +33,9 @@ def random_points(n, count):
 
 
 def square_points(n, count):
+    """
+    Generates points in square grid with added random noise
+    """
     
     l = n/count
     points = []
@@ -39,6 +51,9 @@ def square_points(n, count):
 
 
 def hexa_points(n, count):
+    """
+    Generates points in hexagonal grid with added random noise
+    """
     
     l = n/count
     h = sqrt(l**2 - (l/2)**2)
@@ -49,6 +64,7 @@ def hexa_points(n, count):
             
             x = j*l + (i%2)*(l/2) + uniform(-0.1, 0.1)
             y = i*h + uniform(-0.1, 0.1)
+            #computations needed to skip certain points
             if (i % 2 == 0 and j % 3 != 1) or (i % 2 == 1 and j % 3 != 2):
                 points.append((x, y))
                 
@@ -56,6 +72,10 @@ def hexa_points(n, count):
 
 
 def cross_point(line1, line2, eps=0):
+    """
+    Computes crossing point of 2 lines and returns its coordinates plus
+    True, if the point lyes on both lines (with tolerance eps), False otherwise
+    """
     
     ((xa, ya), (xb, yb)) = line1
     ((xc, yc), (xd, yd)) = line2
@@ -66,11 +86,16 @@ def cross_point(line1, line2, eps=0):
     yp = ((xa*yb - ya*xb)*(yc - yd) - (ya - yb)*(xc*yd - yc*xd))\
          /((xa - xb)*(yc - yd) - (ya - yb)*(xc - xd))
     
-    return xp, yp, xp > min(xa, xb)-eps and xp < max(xa, xb)+eps \
-           and xp > min(xc, xd)-eps and xp < max(xc, xd)+eps
+    return (xp, yp,
+            xp > min(xa, xb)-eps and xp < max(xa, xb)+eps \
+           and xp > min(xc, xd)-eps and xp < max(xc, xd)+eps)
 
 
 def crosses(n, count, l):
+    """
+    Genrates lines using random_lines and computes their crossing points.
+    Prints lines and crossing points (in red) to .svg file
+    """
     
     im = Svg("crosses.svg")
     lines = random_lines(n, count, l)
@@ -89,6 +114,11 @@ def crosses(n, count, l):
 
 
 def triangulation_random(n, count):
+    """
+    Random triangulation, ugly code I won't use, just for refference, gives
+    awful results
+    """
+    
     im = Svg("triang.svg")
     points = random_points(n, count)
     lines = []
@@ -118,12 +148,17 @@ def line_length(line):
 
 
 def triangulation_heuristic(n, count, points_f=random_points):
+    """
+    Triangulation using rule shortest lines first. Bad time complexity,
+    nice results.
+    """
     
     im = Svg("triang.svg")
     points = points_f(n, count)
     lines = []
     triang_lines = []
-    
+
+    #line generation and sorting
     for i in range(len(points)):
         for j in range(i + 1, len(points)):
             lines.append((points[i], points[j]))
@@ -132,18 +167,19 @@ def triangulation_heuristic(n, count, points_f=random_points):
     while len(lines) > 0:
         new_line = lines.pop()
         crossing = False
-        
+
+        #check for crossing
         for line in triang_lines:
             x, y, cross = cross_point(line, new_line, -0.00001)
             if cross:
                 crossing = True
         if not crossing:
             triang_lines.append(new_line)
-            
+
+    #printing        
     for line in triang_lines:
         ((xa, ya), (xb, yb)) = line
-        if line_length(line) > n/count + 3:
-            im.line(xa, ya, xb, yb)
+        im.line(xa, ya, xb, yb)
             
     im.close()
 
