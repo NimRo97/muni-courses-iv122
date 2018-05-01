@@ -2,7 +2,7 @@ from turtle import Turtle
 from MyTurtle import MyTurtle
 from SVG import Svg
 from math import sqrt, sin, cos, acos, atan, radians, degrees
-julie = Turtle()
+julie = MyTurtle()
 julie.speed(10000)
 
 def poly(n, l):
