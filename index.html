@@ -35,6 +35,7 @@
 		img {
 			margin: 0 3.5% 10px;
 			background-color: white;
+			max-width: 75%;
 		}
 
 		#myli {
@@ -103,12 +104,12 @@
 						Some methods are just mocks to keep this compatibility (like .speed()). In order to output image to file, .save() method must be called.
 					</p>
 			
-			<h1>TODO</h1>
-				<p>Lesson 1: a lot is missing, I will catch up during march</p>
-				<p>Lesson 2: everything is missing, I missed the class. I will catch up during Easter Holiday</p>
-				<p>Lesson 3: code near-to-complete, but pictures missing</p>
-				<p>Lesson 4: a lot is missing, I will catch up during march</p>
-				<p>Lesson 5: convex wrap missing, otherwise complete</p>
+			<h1>Summary</h1>
+				<p>Lesson 1: Done, bonus did not interest me.</p>
+				<p>Lesson 2: everything is missing, I missed the class. I will catch up later.</p>
+				<p>Lesson 3: code near-to-complete, but pictures missing.</p>
+				<p>Lesson 4: a lot is missing, I will catch up during march.</p>
+				<p>Lesson 5: convex wrap missing, otherwise complete.</p>
 		</div>
 
 		<li>1</li>
@@ -118,7 +119,7 @@
 
 				<h2>A</h2>
 					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_A.py">Code</a>
-					<p>TODO: description</p>
+					<p>No need for description. No output images.</p>
 				
 				<h2>B</h2>
 					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_B.py">Code</a>
@@ -152,9 +153,33 @@
 
 				<h2>C</h2>	
 					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_C.py">Code</a>
+					<p>
+						The ulam function takes boolean function as a paremeter, to determine whether put pixel or not.
+					</p>
+
+					<p>ulam(1000, prime)</p>
+					<img src="output_images/1/ulam_1000_prime.bmp">
+
+					<p>ulam(1000, lambda n: n % 17 == n % 5)</p>
+					<img src="output_images/1/ulam_mod17_is_mod5.bmp">
+
+					<p>ulam(1000, lambda n: digit_sum(n) % 31 == 1)</p>
+					<img src="output_images/1/ulam_digitsummod31is1.bmp">
+
+					<p>ulam(1000, lambda n: digit_sum(n) ** 2 % 83 >= 10)</p>
+					<img src="output_images/1/ulam_digitsumPow2mod83greaterorequal10.bmp">
 
 				<h2>D</h2>
 					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_D.py">Code</a>
+
+					<p>Efectivity of minus algorhithm.</p>
+					<img src="output_images/1/stepsMinus32.bmp">
+
+					<p>Efectivity of modulo algorhithm.</p>
+					<img src="output_images/1/stepsMod12.bmp">
+
+					<p>Where the modulo algorhithm perfoms much better.</p>
+					<img src="output_images/1/diff.bmp">
 				
 				
 

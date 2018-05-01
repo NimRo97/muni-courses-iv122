@@ -1,6 +1,7 @@
 from turtle import Turtle
 from MyTurtle import MyTurtle
-from math import sqrt, sin, atan, radians, degrees
+from SVG import Svg
+from math import sqrt, sin, cos, acos, atan, radians, degrees
 julie = Turtle()
 julie.speed(10000)
 
@@ -34,8 +35,56 @@ def nested_squares(depth, l=180.0):
         julie.right(45)
         nested_squares(depth-1,((l/2)**2*2)**0.5)
 
+
+def pentagram_turtle(l):
+    li = l * cos(radians(36)) * 2
+    for i in range(5):
+        julie.forward(l)
+        julie.left(72)
+    julie.left(36)
+    for i in range(5):
+        julie.forward(li)
+        julie.left(144)
+
+def pentagram_absolute(l):
+    im = Svg("penta_" + str(l) + ".svg")
+    points = []
+    for i in range(5):
+        points.append((cos(radians(72 * i)) * l, sin(radians(72 * i)) * l))
+    for i in range(5):
+        im.line(points[i][0], points[i][1],
+                points[(i + 1) % 5][0], points[(i + 1) % 5][1])
+        im.line(points[i][0], points[i][1],
+                points[(i + 2) % 5][0], points[(i + 2) % 5][1])
+    im.close()
+
+def circle_lines(r, count):
+    im = Svg("circle_lies_" + str(r) + "_" + str(count) + ".svg")
+    for i in range(count):
+        x = -r + r * 2 / count * i
+        y = sin(acos(x / r)) * r
+        im.line(x, y, x, -y)
+        im.line(y, x, -y, x)
+    im.close()
+
+def nested_polygons(poly=3, size=200, count=10):
+    
+    im = Svg("poly.svg")
+    points = []
+    
+    for i in range(count):
+        r = size / count * (i + 1)
+        points = []
+        for j in range(poly):
+            points.append((cos(radians(360 / poly * j)) * r,
+                           sin(radians(360 / poly * j)) * r))
+        for i in range(poly):
+            im.line(points[i][0], points[i][1],
+                    points[(i + 1) % poly][0], points[(i + 1) % poly][1])
+            
+    im.close()
+    
 def tree(l):
-    julie.left(90)
     if l>5:
         julie.forward(l)
         julie.left(45)
