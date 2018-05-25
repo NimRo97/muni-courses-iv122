@@ -190,8 +190,34 @@
 			
 			<h1>Lesson 2</h1>
 
-				<p>I missed this class, I will catch up during Easter.</p>
-				<p>TODO</p>
+			<h2>A: Generating combinations, permutations and variations</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/2_A-combinatorics.py">Code</a>
+			<p>The code is compact and straightforward. I avoided code repetition by creating a common recursive iterator for lists. Everything is as fast as possible considering the need for list copying.</p>
+		
+			<h2>B: Pascal's triangle</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/2_B-pascal.py">Code</a>
+			<p>
+				Pascal's triangle is computed at once and interpreted using a list of rows, where the row is a simple list of integers. I output triangle to SVG using "rect" element. Printer colors individual squares using custom coloring function, that takes d and their corresponding number. I also made 2 such functions, basic_c colors according to the example in the assignment, the other one simply maps blue uniformly according to the modulus.
+			</p>
+		
+			<h2>Output images</h2>
+
+			<p>pascal(30, 5)</p>
+			<img src="output_images/2/pascal_30_5.svg">
+
+			<p>pascal(83, 83, 5, bluish_c)</p>
+			<img src="output_images/2/pascal_83_83_5_bluish.svg">
+
+			<p>pascal(200, 17, 1, bluish_c)</p>
+			<img src="output_images/2/pascal_200_17_1_bluish.svg">
+
+			<h2>C: Computing &Pi;</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/2_C-pi_computation.py">Code</a>
+			<p>Both Leibniz formula and Archimedes method are usable. Archimedes method is significantly more precise with lower n, but more time consuming per accuracy increase as well. Considering precision / absolute time taken ratio, Archimedes is better. Both Monte Carlo methods are useless, they are time inefficient and random one's precision is nondeterministic.</p>
+
+			<h2>D: Effective modular exponentiation</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/2_D-modulo_power.py">Code</a>
+			<p>While the second algorithm should be faster than naive one, in theory, optimizations in Python do their job and the naive algorithm is much faster. The second one, one the other hand, uses less memory (O(k)). Both of them are rendered useless when introduced to effective modulo algorithm. It has O(log n) time complexity and shares same asymptotic space complexity with the second algorithm. O(log n) is so much faster than previous algorithms, that it is irrelevant to test them at higher numbers (with n = 99,999,999 it is just under 1 second vs roughly half a minute).</p>
 
 		</div>
 

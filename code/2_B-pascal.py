@@ -3,15 +3,15 @@ from SVG import Svg
 
 def basic_c(d, n):
 
-    if n % d == 0:
+    if n % 5 == 0:
         return "red"
-    elif n % d == 1:
+    elif n % 5 == 1:
         return "blue"
-    elif n %d == 2:
+    elif n % 5 == 2:
         return "green"
-    elif n %d == 3:
+    elif n % 5 == 3:
         return "yellow"
-    elif n %d == 4:
+    elif n % 5 == 4:
         return "cyan"
 
 def bluish_c(d, n):
