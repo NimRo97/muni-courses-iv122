@@ -84,7 +84,7 @@ def triangle(n, color_f = color_f_triangle):
                 
     im.save("triangle_"+str(n)+".png", "PNG")
 
-def ellypse_rotated(r, a=1, b=1, psi=0):
+def ellipse_rotated(r, a=1, b=1, psi=0):
 
     im = Image.new("RGB", (2*r, 2*r), WHITE)
     for x in range(2*r):
@@ -95,4 +95,4 @@ def ellypse_rotated(r, a=1, b=1, psi=0):
                 c = round(255*(((xi - r)*a)**2 + ((yi - r)*b)**2)/((r)**2))
                 im.putpixel((x, y), (c,c,c))
 
-    im.save("ellypse_"+str(r)+"_"+str(a)+"_"+str(b)+"_"+str(psi)+".png", "PNG")
+    im.save("ellipse_"+str(r)+"_"+str(a)+"_"+str(b)+"_"+str(psi)+".png", "PNG")

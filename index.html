@@ -217,7 +217,7 @@
 
 			<h2>D: Effective modular exponentiation</h2>
 			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/2_D-modulo_power.py">Code</a>
-			<p>While the second algorithm should be faster than naive one, in theory, optimizations in Python do their job and the naive algorithm is much faster. The second one, one the other hand, uses less memory (O(k)). Both of them are rendered useless when introduced to effective modulo algorithm. It has O(log n) time complexity and shares same asymptotic space complexity with the second algorithm. O(log n) is so much faster than previous algorithms, that it is irrelevant to test them at higher numbers (with n = 99,999,999 it is just under 1 second vs roughly half a minute).</p>
+			<p>While the second algorithm should be, in theory, faster than naive one, optimizations in Python do their job and the naive algorithm is much faster. The second one, one the other hand, uses less memory (O(k)). Both of them are rendered useless when introduced to effective modulo algorithm. It has O(log n) time complexity and shares same asymptotic space complexity with the second algorithm. O(log n) is so much faster than previous algorithms, that it is irrelevant to test them at higher numbers (with n = 99,999,999 it is just under 1 second vs roughly half a minute).</p>
 
 		</div>
 
@@ -243,25 +243,13 @@
 					
 						<h2>Output images</h2>
 	
-						<p>pentagram_absolute(200)</p>
+						<p>pentagram_absolute(200), pentagram_turtle(200), square_spiral(20, 200), circle_lines(100, 20), nested_polygons(3, 200, 10), nested_polygons(6, 200, 10), diamond(12, 30)</p>
 						<img src="output_images/3/penta_200.svg">
-	
-						<p>pentagram_turtle(200)</p>
 						<img src="output_images/3/penta_200_julie.svg">
-	
-						<p>square_spiral(20, 200)</p>
 						<img src="output_images/3/square_spiral_20_200.svg">
-	
-						<p>circle_lines(100, 20)</p>
 						<img src="output_images/3/circle_lines_100_20.svg">
-	
-						<p>nested_polygons(3, 200, 10)</p>
 						<img src="output_images/3/poly.svg">
-	
-						<p>nested_polygons(6, 200, 10)</p>
 						<img src="output_images/3/poly_6.svg">
-	
-						<p>diamond(12, 30)</p>
 						<img src="output_images/3/diamond_12_30.svg">
 	
 					<h2>C</h2>	
@@ -271,30 +259,20 @@
 	
 						<p>I made 2 methods to create koch's snowflake.</p>
 
-						<p>snowflake(400)</p>
+						<p>snowflake(400), snowflake2(400)</p>
 						<img src="output_images/3/snowflake_400.svg">
-	
-						<p>snowflake2(400)</p>
 						<img src="output_images/3/snowflake2_400.svg">
 	
-						<p>fractal(400)</p>
+						<p>fractal(400), hilbert(), penta_star(400), krishna(5, 6)</p>
 						<img src="output_images/3/fractal_400.svg">
-
-						<p>def hilbert()</p>
 						<img src="output_images/3/hilbert.svg">
-
-						<p>def penta_star(400)</p>
 						<img src="output_images/3/penta_star_400.svg">
-
-						<p>krishna(5, 6)</p>
 						<img src="output_images/3/krishna_5_6.svg">
 	
 					<h2>D</h2>
 	
-						<p>cookie(l)</p>
+						<p>cookie(l), nested_squares(10)</p>
 						<img src="output_images/3/cookie_with_fill.png">
-	
-						<p>nested_squares(10)</p>
 						<img src="output_images/3/nested_squares_10.svg">
 
 		</div>
@@ -304,13 +282,61 @@
 			
 			<h1>Lesson 4</h1>
 
-				<h2>Code</h2>
-					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/4.py">Lesson 4 code</a>
+			<h2>A: Basic shapes</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/4_A-basic_shapes.py">Code</a>
+			<p>I tried to make the functions for every shape as parametrizable as possible. Ellipse can be rotated by any angle and has parametrized axes. Not much to talk about here.</p>
+
+			<h2>Output images</h2>
+
+			<p>circle(256), circular_parametric(256, 10000), spiral(256, 5, 50), triangle(512), ellipse_rotated(256, 1, 2, 45)</p>
+			<img src="output_images/4/circle_256.png">
+			<img src="output_images/4/circular_param_256_10000.png">
+			<img src="output_images/4/spiral_256_5_50.png">
+			<img src="output_images/4/triangle_512.png">
+			<img src="output_images/4/ellipse_256_1_2_45.png">
+		
+			<h2>B: Polygon</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/4_B-Polygon.py">Code</a>
+			<p>
+				My polygon doesn't work with absolutely vertical and horizontal lines and minor rounding errors may occur, but it works for the majority of polygons, both convex and concave.
+			</p>
+		
+			<h2>Output images</h2>
+
+			<p>polygon([(10, 10), (180, 20), (160, 150), (100, 50), (20, 180)])</p>
+			<img src="output_images/4/polygon.png">
+
+			<h2>C: Effects</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/2_C-pi_computation.py">Code</a>
+
+			<p>
+				Functions e1, e2, e3 are for effects from an assignment, m1 and m2 are my own.
+			</p>
+
+			<h2>Output images</h2>
+
+			<p>e1(10, 30, 66), e2(256, 192), e3(256)</p>
+			<img src="output_images/4/e1_10_30_66.png">
+			<img src="output_images/4/e2_256_192.png">
+			<img src="output_images/4/e3_256.png">
+
+			<p>m2(256), m1(256, 8)</p>
+			<img src="output_images/4/m2_256.png">
+			<img src="output_images/4/m1_256_8.png">
+
+			<h2>D: Hide and seek</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/4_D-Hide_n_seek.py">Code</a>
+			<p>For first image, I simply put black pixel where ammount of blue was higher than 0. For second image, i averaged the colors and it revealed the word KOZA enough. Using photoshop, i moved the third picture with transparency above itself and found the word.</p>
+
+			<img src="output_images/4/sk1.png">
+			<img src="output_images/4/sk2.png">
 				
-				<h2>Output images</h2>
+				<h2>My cipher:</h2>
 					<p>>>> myCipher("The cake is a lie. Half Life 3 is real. Chemtrails are real. Han shot first. Frodo, in fact, does simply walk into Mordor. Kardashians are not real celebrities. The President's Book of Secrets exists. PlayerUnknown's Battlegrounds is overrated. Bill Cipher is not dead.")</p>
 					<p>>>> myDecipher()</p>
 					<p>The cake is a lie. Half Life 3 is real. Chemtrails are real. Han shot first. Frodo, in fact, does simply walk into Mordor. Kardashians are not real celebrities. The President's Book of Secrets exists. PlayerUnknown's Battlegrounds is overrated. Bill Cipher is not dead.</p>
+					<p>Cipher works. This is how the output image looks like:</p>
+					<img src="output_images/4/cipher.png">
 
 		</div>
 
@@ -319,17 +345,16 @@
 			
 			<h1>Lesson 5</h1>
 
-				<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/5.py">Code</a>
+				<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/5-Basic_geometric_algorithms.py">Code</a>
 			
-				<h2>A</h2>
+				<h2>A: Line segment intersection</h2>
 					<p>crosses(200, 50, 40)</p>
 					<img src="output_images/5/crosses_200_50_40.svg">
 		
-				<h2>B</h2>
+				<h2>B: Triangulation</h2>
 					<p>
 						I made both random and heuristic triangulations. The random one gives (as expected) awful results,
-						heuristic ones are much better. Heuristic method has O(count^4) time complexity, but its results
-						are way "nicer". I also made some point generating functions that are not random.
+                        heuristic ones are much better. The heuristic method has O(count^4) time complexity, but its results are way "nicer". I also made some point generating functions that are not random.
 					</p>
 
 					<p>triangulation_random(200, 50)</p>
@@ -339,8 +364,7 @@
 					<img src="output_images/5/triang_h_200_100.svg">
 
 					<p>
-						triangulation_heuristic(500, 20, hexa_points) This one shows, how the algorhithm is far from
-						optimal, all hexagons should have triangles inside with optimal algorhithm.</p>
+						triangulation_heuristic(500, 20, hexa_points) This one shows, how the algorithm is far from optimal, all hexagons should have triangles inside with optimal algorithm.</p>
 					<img src="output_images/5/triang_h_500_20_hexa.svg">
 
 					<p>triangulation_heuristic(500, 20, square_points)</p>
@@ -354,9 +378,12 @@
 		
 			
 
-				<h2>C</h2>	
-					<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/1_C.py">Code</a>
-					<p>TODO</p>
+				<h2>C: Convex wrap</h2>	
+					<p>I implemented Jarvis's algorithm for gift wrapping.</p>
+
+					<p>convex_wrap(512, 8), convex_wrap(512, 128)</p>
+					<img src="output_images/5/convex_wrap_512_8.svg">
+					<img src="output_images/5/convex_wrap_512_128.svg">
 
 		</div>
 

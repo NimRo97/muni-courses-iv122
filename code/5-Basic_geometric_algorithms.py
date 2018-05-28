@@ -1,6 +1,6 @@
 from SVG import Svg
 from random import uniform, choice
-from math import sqrt, pi, sin, cos
+from math import sqrt, pi, sin, cos, atan2, degrees
 
 
 def random_lines(n, count, l):
@@ -183,6 +183,38 @@ def triangulation_heuristic(n, count, points_f=random_points):
             
     im.close()
 
-def convex_wrap():
-    #TODO
-    pass
+def angle(p1, p2, p3):
+    if p1 == p2 or p2 == p3:
+        return 360
+    x1, y1 = p3[0] - p1[0], p3[1] - p1[1]
+    x2, y2 = p2[0] - p1[0], p2[1] - p1[1]
+    dot = x1*x2 + y1*y2
+    det = x1*y2 - y1*x2
+    return degrees(atan2(det, dot)) % 360
+
+def convex_wrap(n, count, points_f=random_points):
+    
+    im = Svg("convex_wrap.svg")
+    points = points_f(n, count)
+    lines = []
+    
+    for (x, y) in points:
+        im.line(x - 1.5, y - 1.5, x + 1.5, y + 1.5, "red", 4)
+
+    start_point = min(points, key = lambda p: p[1])
+
+    actual_point = start_point
+    previous_point = (actual_point[0] - 100, actual_point[1])
+    next_point = None
+    while next_point != start_point:
+        next_point = min(points, key = lambda p: angle(actual_point,
+                                                       p, previous_point))
+        lines.append((actual_point, next_point))
+        previous_point = actual_point
+        actual_point = next_point
+    
+    for line in lines:
+        ((xa, ya), (xb, yb)) = line
+        im.line(xa, ya, xb, yb)
+            
+    im.close()
