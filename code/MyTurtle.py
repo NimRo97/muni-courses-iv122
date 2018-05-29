@@ -3,12 +3,14 @@ from math import radians, sin, cos
 
 class MyTurtle():
 
-    def __init__(self, im=Svg("turtle.svg")):
+    def __init__(self, name="turtle"):
         self.pen = True
         self.heading = 0
         self.x = 0
         self.y = 0
-        self.im = im
+        self.im = Svg(name+".svg")
+        self.color = "black"
+        self.stroke = 1
 
     def pd(self):
         self.pen = True
@@ -29,7 +31,7 @@ class MyTurtle():
         new_x = self.x + cos(radians(self.heading)) * n
         new_y = self.y + sin(radians(self.heading)) * n
         if self.pen:
-            self.im.line(self.x, self.y, new_x, new_y)
+            self.im.line(self.x, self.y, new_x, new_y, self.color, self.stroke)
         self.x, self.y = new_x, new_y
 
     def backward(self, n):
@@ -45,6 +47,12 @@ class MyTurtle():
 
     def speed(self, n):
         pass
+
+    def color(self, color):
+        self.color = color
+
+    def stroke(self, stroke):
+        self.stroke = stroke
 
     def save(self):
         self.im.close()
