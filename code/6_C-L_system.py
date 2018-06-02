@@ -108,14 +108,6 @@ hilbert = LSystem("hilbert",
                    "l" : 90,
                    "f" : "F"})
 
-hilbert_80 = LSystem("hilbert_80",
-                     "A",
-                     {"A" : "-BF+AFA+FB-",
-                      "B" : "+AF-BFB-FA+"},
-                     {"r" : 91,
-                      "l" : 91,
-                      "f" : "F"})
-
 tree = LSystem("tree",
                "A",
                {"A" : "F[+A]-A",
@@ -169,9 +161,9 @@ def grass_c(n, max_n):
 
 #ADVANCED----------------------------------------------------------------------
 
-def forrest(n):
+def forest(n):
 
-    julie = MyTurtle("forrest")
+    julie = MyTurtle("forest")
 
     for i in range(n):
         julie.heading = 90

@@ -1,7 +1,8 @@
 from PIL import Image
 
-BLACK = (0, 0, 0)
+COLOR = (128, 64, 192)
 WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
 
 """
     size - vertical resolution with maximum x range
@@ -20,7 +21,7 @@ def feinberg(size, detail=10000, r1 = 0, r2 = 4, x1 = 0, x2 = 1):
             x = 4 * r * x * (1 - x)
             if i >= 100 and r > r1 / 4 and r < r2 / 4 and x > x1 and x < x2:
                 im.putpixel((round((r - r1 / 4) * (size - 1) * 4),
-                             round((1 - x - x1) * (size - 1))), BLACK)
+                             round((1 - x - x1) * (size - 1))), COLOR)
 
-    im.show()
+    im.save("feinberg.png", "PNG")
 

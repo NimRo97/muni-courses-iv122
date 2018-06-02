@@ -38,4 +38,4 @@ def chaos_game(size, n, r, count, color_f = black):
          y = y + (1 - r)*(ry - y)
          im.putpixel((round(x), round(y)), color_f(x, y, radius))
 
-    im.show()
+    im.save("chaos.png", "PNG")

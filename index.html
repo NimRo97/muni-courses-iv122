@@ -33,9 +33,15 @@
 		}
 
 		img {
-			margin: 0 3.5% 10px;
+			margin: 0 0 10px 3%;
 			background-color: white;
-			max-width: 30%;
+			max-width: 90%;
+		}
+
+		@media (min-width: 960px) {
+  			img {
+				max-width: 28%;
+  			}  
 		}
 
 		#myli {
@@ -391,7 +397,51 @@
 		<div class="content" style="display: none">
 						
 			<h1>Lesson 6</h1>
-				<p>TODO</p>
+
+			<h2>A: Chaos game</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/6_A-Chaos_game.py">Code</a>
+			<p>Basic polygon point distribution, coloring olny by global position.</p>
+
+			<h2>Output images</h2>
+
+			<img src="output_images/6/chaos_2000_11_onethird_1000000_nice.png">
+			<img src="output_images/6/chaos_2000_3_05_1000000_nice.png">
+			<img src="output_images/6/chaos_2000_3_twothirds_100000_nice.png">
+			<img src="output_images/6/chaos_2000_4_twothirds_1000000_nice.png">
+			<img src="output_images/6/chaos_2000_6_05_1000000_nice.png">
+			<img src="output_images/6/chaos_2000_6_onethird_1000000_nice.png">
+			<img src="output_images/6/chaos_2000_6_twothirds_250000_nice.png">
+			<img src="output_images/6/chaos_2k_83_1over15_1m_nice.png">
+			<img src="output_images/6/chaos_2k_5_piover6_1m_nice.png">
+
+			<h2>B: Feinberg's diagram</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/6_B-Feinberg.py">Code</a>
+			<p>Custom resolution, quality and cutout.</p>
+
+			<h2>Output images</h2>
+
+			<img src="output_images/6/feinberg_2k_25k_3_4.png">
+			<img src="output_images/6/feinberg_2k_50k_1.png">
+
+			<h2>C: L-systems</h2>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/6_C-L_system.py">Code</a>
+			<p>Data are completely separated from code, support for stochastic systems and coloring. Instead of trying new L-systems I created forest function and tried something completely different.</p>
+
+			<h2>Output images</h2>
+
+			<img src="output_images/6/hilbert.svg">
+			<img src="output_images/6/koch.svg">
+			<img src="output_images/6/sierpinski.svg">
+			<img src="output_images/6/tree.svg">
+			<img src="output_images/6/tree2.svg">
+			<img src="output_images/6/stochastic_tree.svg">
+			<img src="output_images/6/tree3.svg">
+
+			<h2>Forest</h2>
+			<p>Images are big. I would recommend using something fast for SVG, either Edge browser or ImageMagick Display. Chrome takes minutes to render it completely.</p>
+
+			<a target="_blank" href="output_images/6/forest.png">PNG</a>
+			<a target="_blank" href="output_images/6/forest.svg">SVG</a>
 
 		</div>
 
