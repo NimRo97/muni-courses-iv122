@@ -453,6 +453,8 @@
 
 			<p>I made functions to use 4 threads to speed them up. I found good color variant for each one and created short gif of Mandelbrot zooming. Each fractal can be drawn with custom cut out, resolution per one mathematical "unit" and count of iterations.</p>
 
+			<h2>Output images</h2>
+
 			<p>newton(res=256, iter_count=100)</p>
 			<img src="output_images/7/newton.bmp">
 
@@ -471,7 +473,17 @@
 		<div class="content" style="display: none">
 						
 			<h1>Lesson 8</h1>
-				<p>TODO</p>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/8-Linear_transformations_MRCM.py">Code</a>
+
+			<p>Code is complete, but I had no time to make more pictures and this lesson did not interest me that much.</p>
+
+			<h2>Output images</h2>
+			<img src="output_images/8/ukazka1.svg">
+			<img src="output_images/8/ukazka2.svg">
+			<img src="output_images/8/ukazka3.svg">
+			<img src="output_images/8/s1.svg">
+			<img src="output_images/8/barnsley.svg">
+			<img src="output_images/8/star.svg">
 			
 		</div>
 
@@ -479,7 +491,41 @@
 		<div class="content" style="display: none">
 						
 			<h1>Lesson 9</h1>
-				<p>TODO</p>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/9/9-Probability_and_statistics.py">Code</a>
+
+			<h2>A: Monty Hall Problem</h2>
+
+			<p>As expected, if one stays with his original choice (s), he has 1/3 chance to win. Changing choice (c) brings 2/3 chance to win. Random choice (r) gives you 1/2 chance to win. Monty Hall makes sense. Your first choice is right in 33% of cases. It means that most of the time, you are wrong to stay. In 66% of cases, you guessed wrong and by changing your choice, you have to win, because the host eliminated the wrong option.</p>
+			<pre>
+		>>> monty_hall(1000, "s")
+		32.4%
+		>>> monty_hall(1000, "s")
+		30.4%
+		>>> monty_hall(1000, "s")
+		30.599999999999998%
+		>>> monty_hall(1000, "c")
+		65.10000000000001%
+		>>> monty_hall(1000, "c")
+		68.60000000000001%
+		>>> monty_hall(1000, "c")
+		65.4%
+		>>> monty_hall(1000, "r")
+		50.2%
+		>>> monty_hall(1000, "r")
+		49.5%
+		>>> monty_hall(1000, "r")
+		52.6%
+			</pre>
+			
+			<h2>B: Non-random numbers</h2>
+
+			<p>Using analyse() function, we can eliminate some of the files. File 1 is not random, generation is altered, so that 2 same numbers in direct succession don't occur as much. File 2 is not random, number 2 occurs less and 5 occurs more. File 3 seems random. File 4 is in no way random, no 2 successive odd or even numbers occur in this one. File 5 is not random, occurrences after some numbers are shifted towards 1->6, 3->4, 4->1, 5->3, 6->2. File 6 is not random, n->(8-n)%6 cases are reduced. File 7 seems random. Zipping files shows, that files 4-7 contain repeating subsequences, with file 6 being just one bigger cycling sequence.</p>
+
+			<p>Overall, only file 3 is random.</p>
+
+			<h2>D: Bayes' theorem</h2>
+
+			<p>Both approaches are implemented and they work, not much to talk about here.</p>
 			
 		</div>
 
@@ -487,22 +533,6 @@
 		<div class="content" style="display: none">
 						
 			<h1>Lesson 10</h1>
-				<p>Holiday</p>
-			
-		</div>
-
-		<li>11</li>
-		<div class="content" style="display: none">
-						
-			<h1>Lesson 11</h1>
-				<p>Holiday</p>
-			
-		</div>
-
-		<li>12</li>
-		<div class="content" style="display: none">
-						
-			<h1>Lesson 12</h1>
 				<p>TODO</p>
 			
 		</div>
@@ -518,8 +548,22 @@
 		<li>14</li>
 		<div class="content" style="display: none">
 						
-			<h1>Lesson 14</h1>
-				<p>TODO</p>
+			<h1>Lesson 14: Maze generation</h1>
+			<a target="_blank" href="https://github.com/NimRo97/iv122/blob/master/code/14-Maze_generation.py">Code</a>
+
+			<p>
+				I chose to create hexagonal maze. Both square and hexa mazes are generated using DFS and both are perfect mazeses. They can be generated with custom sizes and are randomized.
+			</p>
+
+			<h2>Output images</h2>
+
+			<p>square(20)</p>
+			<img src="output_images/14/labirinth_20.svg">
+
+			<p>hexa(20)</p>
+			<img src="output_images/14/hexa_20.svg">
+
+
 			
 		</div>
 	</ul>
