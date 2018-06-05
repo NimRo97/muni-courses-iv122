@@ -121,7 +121,7 @@ class Svg:
         self.file.write('<svg xmlns="http://www.w3.org/2000/svg"' +
                         ' version="1.1" width="' + str(self.get_width()) +
                         '" height="' + str(self.get_height()) + '">\n')
-        self.write_all_lines()
         self.write_all_rectangles()
+        self.write_all_lines()
         self.file.write("</svg>\n")
         self.file.close()

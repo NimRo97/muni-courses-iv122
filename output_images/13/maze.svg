@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="280" height="280">
+  <rect x="0" y="240" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="0" y="200" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="0" y="160" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="0" y="120" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="0" y="80" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="0" y="40" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="0" y="0" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="40" y="240" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="40" y="200" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="40" y="160" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="40" y="120" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="40" y="80" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="40" y="40" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="40" y="0" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="80" y="240" width="40" height="40" stroke="black" stroke-width="1" fill="blue" />
+  <rect x="80" y="200" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="80" y="160" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="80" y="120" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="80" y="80" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="80" y="40" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="80" y="0" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="120" y="240" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="120" y="200" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="120" y="160" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="120" y="120" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="120" y="80" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="120" y="40" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="120" y="0" width="40" height="40" stroke="black" stroke-width="1" fill="blue" />
+  <rect x="160" y="240" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="160" y="200" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="160" y="160" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="160" y="120" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="160" y="80" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="160" y="40" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="160" y="0" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="200" y="240" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="200" y="200" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="200" y="160" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="200" y="120" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="200" y="80" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="200" y="40" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="200" y="0" width="40" height="40" stroke="black" stroke-width="1" fill="white" />
+  <rect x="240" y="240" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="240" y="200" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="240" y="160" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="240" y="120" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="240" y="80" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="240" y="40" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <rect x="240" y="0" width="40" height="40" stroke="black" stroke-width="1" fill="gray" />
+  <line x1="100" y1="260" x2="60" y2="260" stroke="red" stroke-width="1" />
+  <line x1="60" y1="260" x2="20" y2="260" stroke="red" stroke-width="1" />
+  <line x1="20" y1="260" x2="20" y2="220" stroke="red" stroke-width="1" />
+  <line x1="20" y1="220" x2="20" y2="180" stroke="red" stroke-width="1" />
+  <line x1="20" y1="180" x2="60" y2="180" stroke="red" stroke-width="1" />
+  <line x1="60" y1="180" x2="60" y2="140" stroke="red" stroke-width="1" />
+  <line x1="60" y1="140" x2="60" y2="100" stroke="red" stroke-width="1" />
+  <line x1="60" y1="100" x2="60" y2="60" stroke="red" stroke-width="1" />
+  <line x1="60" y1="60" x2="60" y2="20" stroke="red" stroke-width="1" />
+  <line x1="60" y1="20" x2="100" y2="20" stroke="red" stroke-width="1" />
+  <line x1="100" y1="20" x2="140" y2="20" stroke="red" stroke-width="1" />
+</svg>
