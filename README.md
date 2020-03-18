@@ -1,2 +1,2 @@
 # iv122
-IV122 Course code and stuff
+Code and output images/data for IV122 course @ Faculty of informatics, Masaryk University
